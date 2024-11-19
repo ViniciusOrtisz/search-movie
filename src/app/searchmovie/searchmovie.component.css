@@ -1,0 +1,93 @@
+body{
+    margin: 0px;
+    font-family: "Roboto Slab", serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.container-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container.search {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container.search input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    outline: none; 
+
+  }
+  
+  .container.search button {
+    background-color: #007BFF;
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  
+  .container.search button:hover {
+    background-color: #0056b3; 
+  }
+  
+.title{
+    color: #ffffffc2;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background: rgb(17,74,124);
+    background: linear-gradient(90deg, rgba(17,74,124,1) 0%, rgba(237,8,8,1) 100%);
+}
+
+
+button {
+    background-color: #007BFF; /* Azul elegante */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: flex; /* Alinha conteúdo interno */
+    align-items: center; /* Centraliza verticalmente ícone e texto */
+    gap: 8px; /* Espaçamento entre ícone e texto */
+    cursor: pointer; /* Mostra o cursor de clique */
+    transition: background-color 0.2s ease; /* Transição suave */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Muda para azul mais escuro ao passar o mouse */
+  }
+  
+  button:active {
+    background-color: #003f7f; /* Azul ainda mais escuro ao clicar */
+  }
+  
+  button i {
+    font-size: 18px; /* Tamanho do ícone */
+  }
+  
+  footer p {
+    font-size: 10px;
+  }

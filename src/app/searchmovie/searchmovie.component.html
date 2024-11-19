@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar Filme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <h2>Consultor de Filmes por Título</h2>
+    </div>
+  </header>
+  <div class="container search">
+    <input type="text" maxlength="9" placeholder="Digite o Título do Filme" [(ngModel)]="titulo" />
+    <!-- Conexão com o campo cep do componente -->
+    <button (click)="onConsultaFilme()">Consultar</button>
+  </div>
+
+  <div class="container">
+    <img [src]="filmes?.Poster" alt="">
+  </div>
+
+  <div class="container-column">
+    <h2>Filme Encontrado:</h2>
+    <p><b>Título:</b> {{ filmes?.Title }}</p>
+    <p><b>Ano de Lançamento:</b> {{ filmes?.Year }}</p>
+    <p><b>Tempo de Duração:</b> {{ filmes?.Runtime }}</p>
+    <p><b>Genêro:</b> {{ filmes?.Genre }}</p>
+    <p><b>Avaliação Imdb:</b> {{ filmes?.imdbRating }}</p>
+  </div>
+
+  <footer>
+    <p>Copyrigth 2024</p>
+    <p>Vinicius Ortis Weidmann</p>
+    <p>Ricardo Marchesan Felipin</p>
+    <p>Igor Peixoto Gavazzoni</p>
+  </footer>
+</body>
+</html>
