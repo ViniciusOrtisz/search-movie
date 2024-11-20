@@ -6,5 +6,6 @@ export interface Filmes {
   Actors: string;
   Awards: string;
   imdbRating: string;
-  Poster: string
+  Poster: string;
+  imdbID: string;
 }

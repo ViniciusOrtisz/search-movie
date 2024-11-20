@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { SearchMovieService } from './searchmovie.service';
+import { FavoritesService } from '../favoritemovie/favorite.service';
+
 import { Filmes } from './Filmes';
 import { FormsModule } from '@angular/forms';
 
@@ -31,5 +33,21 @@ export class SearchmovieComponent {
     } else {
       console.error('O título do filme não foi informado');
     }
+  }
+
+  filmesfavoritos: any[] = []; // Lista de filmes ou séries
+
+  constructor(private favoritesService: FavoritesService) {}
+
+  toggleFavorite(filmefav: any): void {
+    if (this.favoritesService.isFavorite(filmefav.id)) {
+      this.favoritesService.removeFavorite(filmefav.id);
+    } else {
+      this.favoritesService.addFavorite(filmefav);
+    }
+  }
+
+  isFavorite(filmefavId: string): boolean {
+    return this.favoritesService.isFavorite(filmefavId);
   }
 }
