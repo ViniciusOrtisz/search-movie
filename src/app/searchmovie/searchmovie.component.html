@@ -32,21 +32,26 @@
     <p><b>Ano de Lançamento:</b> {{ filmes?.Year }}</p>
     <p><b>Tempo de Duração:</b> {{ filmes?.Runtime }}</p>
     <p><b>Genêro:</b> {{ filmes?.Genre }}</p>
-    <p><b>Avaliação Imdb:</b> {{ filmes?.imdbRating }}</p>
-    
-    <button (click)="toggleFavorite(filmes)">Favoritar
-    </button>
-    
+    <p><b>Avaliação Imdb:</b> {{ filmes?.imdbRating }}</p> 
+    <button (click)="adicionarAosFavoritos(filmes)">Adicionar aos Favoritos</button>
   </div>
 
+  <div *ngIf="favoritos.length > 0" class="container-column">
+    <h2>Meus Filmes Favoritos:</h2>
+    <ul>
+      <li *ngFor="let favorito of favoritos; let i = index">
+        {{ favoritos[i].Title }}
+      </li>
+    </ul>
+  </div>
   
   
 
   <footer>
     <p>Copyrigth 2024</p>
-    <p>Vinicius Ortis Weidmann</p>
-    <p>Ricardo Marchesan Felipin</p>
-    <p>Igor Peixoto Gavazzoni</p>
+    <p>Vinicius Ortis Weidmann 237257-1</p>
+    <p>Ricardo Marchesan Felipin 238795-1</p>
+    <p>Igor Peixoto Gavazzoni 238788-1</p>
   </footer>
 </body>
 </html>
