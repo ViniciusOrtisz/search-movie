@@ -45,7 +45,7 @@ export class SearchmovieComponent {
   }
 
   // Carrega os favoritos do LocalStorage
-  private carregarFavoritos() {
+  public carregarFavoritos() {
     const storedFavoritos = localStorage.getItem('favoritos');
     this.favoritos = storedFavoritos ? JSON.parse(storedFavoritos) : [];
     console.log('Favoritos carregados:', this.favoritos);
